@@ -24,19 +24,11 @@ app = FastAPI(
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MODEL_PATH = BASE_DIR / "notebooks" / "saved_model"
+MODEL_ID = "tasniaNitu/fake-news-bert"
 
-print(f"Loading model from: {MODEL_PATH}")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 
-tokenizer = AutoTokenizer.from_pretrained(
-    str(MODEL_PATH),
-    local_files_only=True
-)
-
-model = AutoModelForSequenceClassification.from_pretrained(
-    str(MODEL_PATH),
-    local_files_only=True
-)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID)
 
 model.eval()
 
