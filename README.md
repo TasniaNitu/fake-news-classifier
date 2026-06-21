@@ -30,7 +30,7 @@ The workflow includes:
 - Achieved 99.13% F1-score
 - Built REST API using FastAPI
 - Interactive Swagger documentation
-- Saved and deployed trained model
+- Saved trained model artifacts
 
 ## Dataset
 
@@ -94,7 +94,7 @@ A pre-trained BERT model was fine-tuned on the fake news dataset using Hugging F
 
 ### Training Configuration
 
-* Model: BERT
+* Model: bert-base-uncased
 * Framework: PyTorch
 * Tokenizer: BERT Tokenizer
 * Maximum Sequence Length: 256
@@ -179,7 +179,7 @@ http://127.0.0.1:8000/docs
 
 ## FastAPI Deployment
 
-The trained model was deployed using FastAPI.
+The trained model was served through a FastAPI REST API for local inference and testing.
 
 ### Interactive Swagger Documentation
 
@@ -282,4 +282,25 @@ BERT improved accuracy from 95.31% to 99.11%, representing a gain of 3.8 percent
 
 ## Key Achievement
 
-Developed an end-to-end fake news classification system using BERT, improving accuracy from 95.31% (TF-IDF + Logistic Regression) to 99.11%, and deployed the model as a production-style FastAPI service with interactive Swagger documentation.
+Developed an end-to-end fake news classification system using BERT, improving accuracy from 95.31% (TF-IDF + Logistic Regression) to 99.11%. Built a production-style FastAPI REST API with interactive Swagger documentation and hosted the trained model on Hugging Face for deployment and inference workflows.
+
+## Deployment Note
+
+The trained BERT model is hosted on Hugging Face.
+
+A Render deployment was configured successfully, but the free Render instance (512 MB RAM) could not load the 438 MB BERT model due to memory limitations. The API runs locally and can be deployed on infrastructure with sufficient memory resources.
+
+## Model Repository
+
+The trained BERT model is hosted on Hugging Face:
+
+https://huggingface.co/TasniaNitu/fake-news-bert
+
+Model files include:
+
+- config.json
+- model.safetensors
+- tokenizer.json
+- tokenizer_config.json
+
+These artifacts can be loaded directly using Hugging Face Transformers without retraining.
