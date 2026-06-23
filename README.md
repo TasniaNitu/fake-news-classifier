@@ -32,6 +32,10 @@ The workflow includes:
 - Interactive Swagger documentation
 - Saved trained model artifacts
 
+## Tech Stack
+
+Python • PyTorch • Hugging Face Transformers • FastAPI • Scikit-Learn • NumPy • Pandas • Docker • Swagger UI
+
 ## Dataset
 
 **Dataset:** WELFake Dataset (72,134 news articles)
@@ -294,7 +298,7 @@ A Render deployment was configured successfully, but the free Render instance (5
 
 The trained BERT model is hosted on Hugging Face:
 
-https://huggingface.co/TasniaNitu/fake-news-bert
+[Hugging Face Model Repository](https://huggingface.co/TasniaNitu/fake-news-bert)
 
 Model files include:
 
