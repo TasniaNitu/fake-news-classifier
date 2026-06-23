@@ -219,7 +219,7 @@ Request:
 
 ```json
 {
-  "text": "Scientists discovered a new species of fish in the Pacific Ocean."
+  "text": "Scientists from the University of California announced the discovery of a new species of fish in the Pacific Ocean. The researchers said the species was identified during a deep-sea expedition and further studies are underway."
 }
 ```
 
